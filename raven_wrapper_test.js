@@ -37,9 +37,9 @@ describe('raven_wrapper', () => {
       ravenWrapperConfig.environment = 'production';
       const { logException } = RavenWrapperFactory(ravenWrapperConfig);
       mockError = new Error('error');
-      logException(mockError);
+      logException(mockError, { level: 'warning'});
 
-      expect(stubbedRavenCaptureException.calledOnceWithExactly(mockError)).to.equal(true);
+      expect(stubbedRavenCaptureException.calledOnceWithExactly(mockError, { level: 'warning'})).to.equal(true);
     });
   });
 

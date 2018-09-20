@@ -12,8 +12,8 @@ module.exports = (ravenWrapperConfig) => {
   const setUpHandlingExceptionsRejectionsProdEnv = () => {
     setUpRaven();
 
-    logException = (exception) => {
-      Raven.captureException(exception);
+    logException = (exception, additionalInfo) => {
+      Raven.captureException(exception, additionalInfo);
     };
 
     wrapperToHandleUnhandledExceptions = Raven.context.bind(Raven);
