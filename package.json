@@ -6,6 +6,10 @@
   "scripts": {
     "unit-test": "nyc mocha --timeout=10000 \"**/*_test.js\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpacelabUK/raven-wrapper.git"
+  },
   "author": "Simon Norman",
   "license": "UNLICENSED",
   "devDependencies": {
