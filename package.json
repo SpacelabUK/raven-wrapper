@@ -1,8 +1,8 @@
 {
   "name": "raven-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Component for logging errors and capturing and logging unhandled exceptions and promise rejections",
-  "main": "logger.js",
+  "main": "raven_wrapper.js",
   "scripts": {
     "unit-test": "nyc mocha --timeout=10000 \"**/*_test.js\""
   },

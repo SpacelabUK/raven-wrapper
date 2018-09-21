@@ -6,6 +6,7 @@ module.exports = (ravenWrapperConfig) => {
   let wrapperToHandleUnhandledExceptions;
 
   const setUpRaven = () => {
+    console.log(ravenWrapperConfig.ravenConfig);
     Raven.config(ravenWrapperConfig.ravenConfig).install();
   };
 
