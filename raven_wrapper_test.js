@@ -23,12 +23,12 @@ describe('raven_wrapper', () => {
 
     ravenWrapperConfig = {
       environment: '',
-      ravenConfig: [
-        'https://fakeravenaccount@sentry.io/fakeid',
-        {
+      ravenConfig: {
+        dsn: 'https://fakeravenaccount@sentry.io/fakeid',
+        options: {
           captureUnhandledRejections: true,
         }
-      ]
+      }
     }
   });
 

@@ -1,13 +1,15 @@
 
 const Raven = require('raven');
 
-module.exports = (ravenWrapperConfig) => {
+module.exports = ({ environment, ravenConfig }) => {
   let logException;
   let wrapperToHandleUnhandledExceptions;
 
   const setUpRaven = () => {
-    console.log(ravenWrapperConfig.ravenConfig);
-    Raven.config(ravenWrapperConfig.ravenConfig).install();
+    Raven.config(
+      ravenConfig.dsn,
+      ravenConfig.options 
+      ).install();
   };
 
   const setUpHandlingExceptionsRejectionsProdEnv = () => {
@@ -43,7 +45,7 @@ module.exports = (ravenWrapperConfig) => {
   };
 
 
-  if (ravenWrapperConfig.environment !== 'development') {
+  if (environment !== 'development') {
     setUpHandlingExceptionsRejectionsProdEnv();
   } else {
     setUpHandlingExceptionsRejectionsDevEnv();

@@ -1,6 +1,6 @@
 {
   "name": "raven-wrapper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Component for logging errors and capturing and logging unhandled exceptions and promise rejections",
   "main": "raven_wrapper.js",
   "scripts": {
